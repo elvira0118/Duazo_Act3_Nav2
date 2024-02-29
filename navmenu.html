@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+
+    nav {
+        width: 10rem;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    nav ul li {
+        display: block;
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 25px;
+        color: #fff;
+        text-decoration: none;
+        border: 0.3px solid #444;
+        border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+        background-color: rgb(151, 221, 248);
+    }
+
+    nav ul ul {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: #444;
+    }
+
+    nav ul li:focus-within>ul {
+        display: inherit;
+        width: 100%;
+        margin-left: 5px;
+    }
+
+    nav ul li:focus-within>a {
+        background-color: rgb(151, 221, 248);
+    }
+
+    span {
+        height: 12px;
+        width: 10px;
+        float: right;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCTS <span>▶</span></a>
+                <ul>
+                    <li><a href="#">PRODUCT 1 <span>▶</span></a>
+                        <ul>
+                            <li><a href="#">SUB PRODUCT</a></li>
+                            <li><a href="#">SUB PRODUCT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PRODUCT 2 <span>▶</span></a>
+                        <ul>
+                            <li><a href="#">SUB PRODUCT</a></li>
+                            <li><a href="#">SUB PRODUCT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
